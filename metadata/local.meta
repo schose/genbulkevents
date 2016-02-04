@@ -1,0 +1,28 @@
+[app/ui]
+version = 6.1.9
+modtime = 1454321548.963613000
+
+[app/launcher]
+version = 6.1.9
+modtime = 1454321548.965412000
+
+[savedsearches/genbuldkevents%20-%20database]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.1.9
+modtime = 1454343078.668397000
+
+[savedsearches/Datavolume%20generated]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.1.9
+modtime = 1454343384.294640000
+
+[views/overview]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 6.1.9
+modtime = 1454348988.151623000

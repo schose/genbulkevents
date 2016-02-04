@@ -1,0 +1,33 @@
+<dashboard>
+  <label>overview</label>
+  <row>
+    <panel>
+      <table>
+        <title>Storage</title>
+        <searchString>| dbinspect index=genbulkevents</searchString>
+        <earliestTime/>
+        <latestTime/>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="count">10</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>License</title>
+        <searchString>index=_internal source=*license* st=bw_splunk_gen idx=genbulkevents | stats sum(b) as sizebytes by st idx | eval mBytes = sizebytes / 1024 / 1024 | fields - sizebytes</searchString>
+        <earliestTime>-24h@h</earliestTime>
+        <latestTime>now</latestTime>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="count">10</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>
